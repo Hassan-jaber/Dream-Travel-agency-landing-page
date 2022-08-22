@@ -1,60 +1,244 @@
 /* Start Global Rules */
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 :root {
-    /* --main-color: #6138e1;
+  /* --main-color: #6138e1;
     --main-color-alt: #1787e0; */
-    --min-btn-color: #34A5E4;;
-    --main-transition: 0.3s;
+  --min-btn-color: #34a5e4;
+  --main-transition: 0.3s;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fd;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fd;
 }
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: white;
+}
+
+.center-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* End Global Rules */
 /* Start Media Query */
 /* Small devices */
 @media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
+  .container {
+    width: 750px;
+  }
 }
 
 /* Medium devices */
 @media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
+  .container {
+    width: 970px;
+  }
 }
 
 /* Large devices */
 @media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
+  .container {
+    width: 1170px;
+  }
 }
 /* End Media Query */
+
+/* start landing */
+.landing {
+  position: relative;
+}
+.landing .container {
+  height: calc(100vh - 200px);
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/landing-image.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  height: 72px;
+}
+header ul {
+  display: flex;
+  align-items: center;
+}
+header ul li {
+  padding-left: 20px;
+  text-transform: lowercase;
+}
+header .btn {
+  color: #fff9f8;
+  height: 55px;
+  padding: 15px;
+  border: 1px solid #777f96;
+  border-radius: 4px;
+}
+.header__toggle,
+.header__close {
+  display: none;
+}
+.txt-landing {
+  width: 100%;
+  flex-direction: column;
+  color: white;
+  padding: 5px 15px;
+}
+.txt-landing {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.txt-landing h1 {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+}
+.txt-landing p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
+  text-align: center;
+  mix-blend-mode: normal;
+  opacity: 0.88;
+}
+form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input {
+  width: 500px;
+  height: 50px;
+  border: none;
+  outline: none;
+}
+button {
+  width: 50px;
+  height: 50px;
+  margin-right: -1%;
+  border: none;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+}
+button i {
+  margin-left: 1%;
+  font-size: 15px;
+}
+button:hover {
+  color: white;
+  background-color: #059862;
+  transition: 0.3s linear;
+}
+#drop-down {
+  width: 100px;
+  height: 50px;
+  border: none;
+  outline: none;
+  margin-left: -100px;
+}
+
+#drop-down option:focus {
+  background-color: #059862;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  form {
+    margin-top: 180px;
+  }
+  form input {
+    width: 300px;
+  }
+  #drop-down {
+    width: 80px;
+    margin-left: -80px;
+  }
+  .landing::before {
+    background-position: center left;
+  }
+  .header__toggle {
+    display: inline;
+    color: #eeee;
+    font-size: 24px;
+  }
+
+  .header__close {
+    position: absolute;
+    right: 24px;
+    display: block;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+
+  .header__close:hover {
+    background-color: #00adb5;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #222831;
+    color: #eeee;
+    width: 60%;
+    height: 100vh;
+    padding: 24px 0;
+    z-index: 100;
+    transition: 0.5s;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav__item {
+    margin: 2rem 0;
+  }
+
+  .show {
+    right: 0;
+  }
+}
+/* end landing */
