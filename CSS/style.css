@@ -668,6 +668,9 @@ button:hover {
   .group-2 {
     flex-direction: column;
   }
+  .group-1 {
+    margin-top: 100px;
+  }
   .group-1 img,
   .group-2 img {
     margin-top: 5%;
@@ -675,3 +678,164 @@ button:hover {
   }
 }
 /* End article */
+/* Start Top city's section */
+.top-citys {
+  margin-top: 200px;
+}
+.top-citys-txt-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-city-btn {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+.txt > :first-child {
+  height: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.17em;
+  color: #4141a5;
+}
+.txt > :nth-child(2) {
+  height: 52px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -0.5px;
+  color: #292929;
+}
+.txt > :nth-child(3) {
+  width: 394px;
+  height: 56px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #5c6272;
+}
+.top-city-cards {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-rows: auto;
+  grid-row-gap: 1%;
+  grid-column-gap: 6%;
+}
+
+.card-one,
+.card-two,
+.card-three {
+  height: 495px;
+  width: 364px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+.card-one div,
+.card-two div,
+.card-three div {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 44px;
+  left: 33px;
+}
+.card-one div > :first-child,
+.card-two div > :first-child,
+.card-three div > :first-child {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 34px;
+  color: #ffffff;
+  text-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+}
+.card-one div > :nth-child(2),
+.card-two div > :nth-child(2),
+.card-three div > :nth-child(2) {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  opacity: 0.9;
+}
+.card-one > :first-child,
+.card-two > :first-child,
+.card-three > :first-child {
+  position: absolute;
+  left: 33px;
+  top: 33px;
+  height: 50px;
+  background-color: #e9ebf31e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #e9ebf3;
+}
+.card-one > :first-child {
+  width: 114px;
+}
+.card-two > :first-child {
+  width: 148px;
+}
+.card-three > :first-child {
+  width: 151px;
+}
+.card-one div span,
+.card-two div span,
+.card-three div span {
+  padding: 10px 0px;
+}
+
+.card-one::before,
+.card-two::before,
+.card-three::before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+.card-one::before {
+  background-image: url(../images/al-arab-tower.png);
+}
+.card-two::before {
+  background-image: url(../images/Bali.png);
+}
+.card-three::before {
+  background-image: url(../images/Barcelona.png);
+}
+@media (max-width: 767px) {
+  .card-one,
+  .card-two,
+  .card-three {
+    margin: 20px auto;
+  }
+  .top-citys-txt-buttons {
+    flex-direction: column;
+    /* overflow-x: hidden; */
+  }
+  .top-city-btn {
+    width: 120px;
+    margin-top: 50px;
+    align-self: center;
+  }
+  .txt > :nth-child(3) {
+    width: 270px;
+  }
+}
+/* End Top city's section */
